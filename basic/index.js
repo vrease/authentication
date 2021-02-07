@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
     ? res.setHeader("WWW-Authenticate", "Basic").status(401).end()
     : Buffer.from(req.headers.authorization.split(" ")[1], "base64")
         .toString()
-        .split(":")[0] == "edemone" &&
+        .split(":")[0] == "jonathan" &&
       Buffer.from(req.headers.authorization.split(" ")[1], "base64")
         .toString()
         .split(":")[1] == "secret"
